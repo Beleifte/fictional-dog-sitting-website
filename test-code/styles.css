@@ -1,0 +1,151 @@
+
+/* ==========================
+   GENERAL STYLING
+   ========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #faf6f6;
+}
+
+
+/* ==========================
+   HERO BANNER
+   ========================== */
+
+.hero {
+    min-height: 550px;
+    width: 100%;
+
+    /* Banner background image */
+    background-image: url("assets/main-banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Position text on the left */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 60px 8%;
+}
+
+
+/* ==========================
+   BANNER TEXT AND BUTTON
+   ========================== */
+
+.banner-text {
+    max-width: 450px;
+}
+
+.banner-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0 0 25px;
+}
+
+.banner-text button {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #f4a261;
+    color: white;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-text button:hover {
+    background-color: #e58b48;
+}
+
+
+/* ==========================
+   DECORATIVE WAVE
+   ========================== */
+
+.banner-wave {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.banner-wave img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ==========================
+   MAIN CONTENT: THREE BOXES
+   ========================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    padding: 50px 8%;
+}
+
+.grid section {
+    min-height: 200px;
+    padding: 25px;
+
+    background-color: #f5f5f5;
+    border-radius: 12px;
+}
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 450px;
+        padding: 40px 6%;
+        background-position: center;
+    }
+
+    .banner-text {
+        max-width: 100%;
+    }
+
+    .banner-text h1 {
+        font-size: 32px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 6%;
+    }
+}
